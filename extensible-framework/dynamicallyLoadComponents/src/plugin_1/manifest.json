@@ -1,0 +1,14 @@
+{
+    "id": "plugin_1",
+    "ver": "1.0",
+    "author": "Rajeev Sathish",
+    "title": "Test Plugin",
+    "description": "",
+    "publishedDate": "",
+    "folderName":"plugin_1",
+    "moduleName":"pluginModule",
+    "componentName":"ExPlugin",
+    "fileName":"dynamic.module"
+    "editor": {
+    }
+}
