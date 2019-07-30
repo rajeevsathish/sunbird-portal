@@ -66,6 +66,9 @@ export class PublishedComponent extends WorkSpace implements OnInit, AfterViewIn
    * To show / hide error when no result found
   */
   showError = false;
+
+  showCourseQRCodeBtn = false;
+
   /**
     * To show / hide no result message when no result found
   */
@@ -155,7 +158,23 @@ export class PublishedComponent extends WorkSpace implements OnInit, AfterViewIn
       this.pageNumber = Number(params.pageNumber);
       this.fetchPublishedContent(this.config.appConfig.WORKSPACE.PAGE_LIMIT, this.pageNumber);
     });
+    this.isPublishedCourse();
   }
+  isPublishedCourse(){
+    const searchParams = { status: ['Live'], contentType: ['Course'], params: { lastUpdatedOn: 'desc' } };
+    const inputParams = { params: '' };
+      this.searchService.searchContentByUserId(searchParams, inputParams).subscribe((data: ServerResponse) => {
+       if(data.result.content.length > 0){
+         console.log('------>',data.result.content.length);
+         this.showCourseQRCodeBtn = true;
+       }
+      });
+  }
+  getCourseQRCsv(){
+    console.log('--> Call the Api to get the csv file link and download the same');
+    // TODO call the api to get the csv link and download csv file 
+  }
+
   /**
     * This method sets the make an api call to get all Published content with page No and offset
     */
