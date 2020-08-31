@@ -43,6 +43,9 @@ export class PublicCourseComponent implements OnInit, OnDestroy, AfterViewInit {
   pageTitleSrc;
   svgToDisplay;
   formData: any;
+  public facets: Array<string>;
+  public facetsList: any;
+  public selectedFilters;
   public slugForProminentFilter = (<HTMLInputElement>document.getElementById('slugForProminentFilter')) ?
   (<HTMLInputElement>document.getElementById('slugForProminentFilter')).value : null;
 
@@ -142,6 +145,7 @@ export class PublicCourseComponent implements OnInit, OnDestroy, AfterViewInit {
         }
     }
   public getFilters(filters) {
+    this.selectedFilters = filters.filters;
     const defaultFilters = _.reduce(filters, (collector: any, element) => {
         if (element.code === 'board') {
           collector.board = _.get(_.orderBy(element.range, ['index'], ['asc']), '[0].name') || '';
@@ -228,6 +232,7 @@ export class PublicCourseComponent implements OnInit, OnDestroy, AfterViewInit {
       organisationId: this.hashTagId || '*',
       filters: filters,
       fields: _.get(currentPageData, 'search.fields') || this.configService.urlConFig.params.CourseSearchField,
+      facets: ['channel', 'gradeLevel', 'subject', 'medium'],
       // softConstraints: { badgeAssertions: 98, board: 99,  channel: 100 },
       // mode: 'soft',
       // exists: [],
@@ -237,6 +242,9 @@ export class PublicCourseComponent implements OnInit, OnDestroy, AfterViewInit {
       .subscribe(data => {
         this.showLoader = false;
         this.carouselMasterData = this.prepareCarouselData(_.get(data, 'sections'));
+        this.facets = this.updateFacetsData(_.get(data, 'sections[0].facets'));
+        console.log('------>', this.facets);
+        this.initFilters = true;
         if (!this.carouselMasterData.length) {
           return; // no page section
         }
@@ -306,5 +314,47 @@ export class PublicCourseComponent implements OnInit, OnDestroy, AfterViewInit {
       'message': 'messages.stmsg.m0007',
       'messageText': 'messages.stmsg.m0006'
     };
+  }
+  updateFacetsData(facets) {
+    return _.map(facets, facet => {
+      switch (_.get(facet, 'name')) {
+        case 'board':
+          facet['index'] = '1';
+          facet['label'] = this.resourceService.frmelmnts.lbl.boards;
+          facet['placeholder'] = this.resourceService.frmelmnts.lbl.selectBoard;
+          break;
+        case 'medium':
+          facet['index'] = '2';
+          facet['label'] = this.resourceService.frmelmnts.lbl.medium;
+          facet['placeholder'] = this.resourceService.frmelmnts.lbl.selectMedium;
+          break;
+        case 'gradeLevel':
+          facet['index'] = '3';
+          facet['label'] = this.resourceService.frmelmnts.lbl.class;
+          facet['placeholder'] = this.resourceService.frmelmnts.lbl.selectClass;
+          break;
+        case 'subject':
+          facet['index'] = '4';
+          facet['label'] = this.resourceService.frmelmnts.lbl.subject;
+          facet['placeholder'] = this.resourceService.frmelmnts.lbl.selectSubject;
+          break;
+        case 'publisher':
+          facet['index'] = '5';
+          facet['label'] = this.resourceService.frmelmnts.lbl.publisher;
+          facet['placeholder'] = this.resourceService.frmelmnts.lbl.selectPublisher;
+          break;
+        case 'contentType':
+          facet['index'] = '6';
+          facet['label'] = this.resourceService.frmelmnts.lbl.contentType;
+          facet['placeholder'] = this.resourceService.frmelmnts.lbl.selectContentType;
+          break;
+          case 'channel':
+          facet['index'] = '1';
+          facet['label'] = this.resourceService.frmelmnts.lbl.orgname;
+          facet['placeholder'] = this.resourceService.frmelmnts.lbl.orgname;
+          break;
+      }
+      return facet;
+    });
   }
 }
