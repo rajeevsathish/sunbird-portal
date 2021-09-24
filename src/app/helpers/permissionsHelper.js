@@ -124,8 +124,11 @@ let PERMISSIONS_HELPER = {
         logger.info({ msg: 'getCurrentUserRoles :: Session data set success', session: _sessionLog });
         reqObj.session.save(function (error) {
           if (error) {
+            logger.debug({msg: 'PermissionHelper--11111->error', error});
             callback(error, null)
           } else {
+            logger.debug({msg: 'PermissionHelper--22222->No Error', body});
+            logger.debug({msg: 'PermissionHelper--3333->req session', reqObj['session']});
             callback(null, body)
           }
         });

@@ -8,6 +8,10 @@ const consistency = getConsistencyLevel(envHelper.PORTAL_CASSANDRA_CONSISTENCY_L
 const replicationStrategy = getReplicationStrategy(envHelper.PORTAL_CASSANDRA_REPLICATION_STRATEGY)
 
 function getCassandraStoreInstance  () {
+  logger.debug({msg: 'CassandraUtil ---> contactPoints', contactPoints});
+  logger.debug({msg: 'CassandraUtil ---> consistency', consistency});
+  logger.debug({msg: 'CassandraUtil ---> replicationStrategy', replicationStrategy});
+  logger.debug({msg: 'CassandraUtil ---> env variables', envHelper});
   return new CassandraStore({
     'table': 'sessions',
     'client': null,
