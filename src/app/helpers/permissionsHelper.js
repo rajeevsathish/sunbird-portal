@@ -128,7 +128,7 @@ let PERMISSIONS_HELPER = {
             callback(error, null)
           } else {
             logger.debug({msg: 'PermissionHelper--22222->No Error', body});
-            logger.debug({msg: 'PermissionHelper--3333->req session', reqObj['session']});
+            logger.debug({msg: 'PermissionHelper--3333->req', reqObj});
             callback(null, body)
           }
         });
