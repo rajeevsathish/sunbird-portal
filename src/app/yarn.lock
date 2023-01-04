@@ -2312,10 +2312,10 @@
     typescript-ioc "^1.2.4"
     uuid "^3.2.1"
 
-"@project-sunbird/form-service@0.0.14":
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/@project-sunbird/form-service/-/form-service-0.0.14.tgz#80bef402bc8634fec411530da7b4c7484fe59a4c"
-  integrity sha512-+y76F/076xUeNxGAJIvyAVCxF9vGgQ64gBVhTZhsTrwKmovX2jw0Af7Adc0kHgJ20vzV4TD/U/2InmY8zYPa/g==
+"@project-sunbird/form-service@0.0.15":
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/@project-sunbird/form-service/-/form-service-0.0.15.tgz#4dd5cb1612da463d413d8b3db83460e211afddeb"
+  integrity sha512-nkC0CFqY06BpCJmgCrjDFMUpZeUMWkCJ7q3/7G3dP61HB9xIKYECl2c68f0IqPwIy/4a+Iajmx2MB/uzMPTogw==
   dependencies:
     joi "^13.4.0"
     lodash "^4.17.10"
@@ -3625,10 +3625,10 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-client-cloud-services@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/client-cloud-services/-/client-cloud-services-2.0.0.tgz#3c34c97669d99c9b1a63690c5b28f5b2ee510ad7"
-  integrity sha512-WoMzxpuYC6gzJt/SCuVLamyFn56nMAlna9yhgWeK9qNjpNNXHgJ02uqLI6x9R7BV6NlV3D5goiD0iTYkwTJsZA==
+client-cloud-services@2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/client-cloud-services/-/client-cloud-services-2.0.3.tgz#79add27229a7ad9bce378ede8cd23ade06e6f1f5"
+  integrity sha512-rKbybzXx9g05zj5tG+DHhYDAEjrOXBHtNpPQZU60CAw2Qasa6Nu8NScfbtdyxya+eNHGG5YbulPGW7jU/hXvtQ==
   dependencies:
     "@aws-sdk/client-s3" "3.163.0"
     "@aws-sdk/lib-storage" "3.182.0"

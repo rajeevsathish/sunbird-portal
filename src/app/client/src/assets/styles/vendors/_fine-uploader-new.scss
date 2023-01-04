@@ -1,3 +1,5 @@
+@use "~@project-sunbird/sb-styles/assets/mixins/mixins" as *;
+
 /***********************************************
    Hacks -
 
@@ -56,11 +58,11 @@
 .qq-upload-pause, .qq-upload-continue {
     background-color: var(--rc-00abc7);
     color: var(--rc-FAFAFA);
-    border-color: var(--rc-2dadc2);
+    border-color: var(--rc-00abc7);
     text-shadow: 0 calculateRem(1px) calculateRem(1px) rgba(0, 0, 0, 0.55);
 }
 .qq-upload-pause:hover, .qq-upload-continue:hover {
-    background-color: var(--rc-0fbad6);
+    background-color: var(--rc-33B6CC);
 }
 
 /* Upload Button
@@ -69,17 +71,17 @@
     display: inline;
     width: calculateRem(105px);
     margin-bottom: calculateRem(10px);
-    padding: 7px calculateRem(10px);
+    padding: calculateRem(7px) calculateRem(10px);
     text-align: center;
     float: left;
     background: var(--rc-00abc7);
     color: var(--white);
     border-radius: calculateRem(2px);
-    border: 1px solid var(--rc-2dadc2);
-    box-shadow: 0 calculateRem(1px) calculateRem(1px) rgba(255, 255, 255, 0.37) inset,
-    calculateRem(1px) 0 calculateRem(1px) rgba(255, 255, 255, 0.07) inset,
-                0 calculateRem(1px) 0 rgba(0, 0, 0, 0.36),
-                0 calculateRem(-2px) calculateRem(12px) rgba(0, 0, 0, 0.08) inset;
+    border: calculateRem(1px) solid var(--rc-00abc7);
+    box-shadow: 0 calculateRem(1px) calculateRem(1px) rgba(var(--rc-rgba-white), 0.37) inset,
+    calculateRem(1px) 0 calculateRem(1px) rgba(var(--rc-rgba-white), 0.07) inset,
+                0 calculateRem(1px) 0 rgba(var(--rc-rgba-black), 0.36),
+                0 calculateRem(-2px) calculateRem(12px) rgba(var(--rc-rgba-black), 0.08) inset;
 }
 .qq-upload-button-hover {
     background: var(--rc-33B6CC);
@@ -98,7 +100,7 @@
     overflow-y: hidden;
     width: inherit;
     border-radius: calculateRem(6px);
-    background-color: var(--rc-fdfdfd);
+    background-color: var(--rc-f9f9f9);
     border: calculateRem(1px) dashed var(--gray-100);
     padding: calculateRem(20px);
 }
@@ -142,7 +144,7 @@
     min-height: calculateRem(40px);
 }
 .qq-upload-drop-area-active {
-    background: var(--rc-fdfdfd);
+    background: var(--rc-f9f9f9);
     border-radius: calculateRem(4px);
     border: calculateRem(1px) dashed var(--gray-100);
 }
