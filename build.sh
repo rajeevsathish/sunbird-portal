@@ -24,7 +24,7 @@ fi
 echo "I am testing the build"
 echo "-------------"
 commit_hash=$(git rev-parse --short HEAD)
-nvm unilstall $NODE_VERSION
+nvm uninstall $NODE_VERSION
 nvm install $NODE_VERSION # same is used in client and server
 
 cd src/app
