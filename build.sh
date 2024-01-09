@@ -8,6 +8,12 @@ echo $HOME
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+echo "value of one "$1
+echo "value of two "$2
+echo "value of three "$3
+echo "value of four "$4
+echo "value of five "$5
 build_tag=$1
 name=player
 node=$2
@@ -99,6 +105,7 @@ cd app_dist
 # echo "/version/a\  \"buildHash\": \"${commit_hash}\"," package.json
 # sed -i "/version/a\  \"buildHash\": \"${commit_hash}\"," package.json
 echo "starting docker build"
+echo "--->" docker build --no-cache --label commitHash=$(git rev-parse --short HEAD) -t ${org}/${name}:${build_tag}
 docker build --no-cache --label commitHash=$(git rev-parse --short HEAD) -t ${org}/${name}:${build_tag} .
 echo "completed docker build"
 cd ../../..
