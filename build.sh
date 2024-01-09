@@ -96,8 +96,8 @@ echo "Client and Server Build complete Took $[$BUILD_ENDTIME - $STARTTIME] secon
 if [ $buildDockerImage == true ]
 then
 cd app_dist
-echo "/version/a\  \"buildHash\": \"${commit_hash}\"," package.json
-sed -i "/version/a\  \"buildHash\": \"${commit_hash}\"," package.json
+# echo "/version/a\  \"buildHash\": \"${commit_hash}\"," package.json
+# sed -i "/version/a\  \"buildHash\": \"${commit_hash}\"," package.json
 echo "starting docker build"
 docker build --no-cache --label commitHash=$(git rev-parse --short HEAD) -t ${org}/${name}:${build_tag} .
 echo "completed docker build"
