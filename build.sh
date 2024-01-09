@@ -7,6 +7,11 @@ set -euo pipefail
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+apt-update
+apt install curl
+curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
+bash nodesource_setup.sh
+apt install nodejs
 build_tag=$1
 name=player
 node=$2
