@@ -24,6 +24,7 @@ fi
 echo "I am testing the build"
 echo "-------------"
 commit_hash=$(git rev-parse --short HEAD)
+echo "commit_hash ---->" $commit_hash
 nvm uninstall $NODE_VERSION
 nvm install $NODE_VERSION # same is used in client and server
 npm i -g yarn
