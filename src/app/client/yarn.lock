@@ -2306,21 +2306,21 @@
   dependencies:
     tslib "^2.0.0"
 
-"@project-sunbird/sb-dashlet@6.0.5":
-  version "6.0.5"
-  resolved "https://registry.yarnpkg.com/@project-sunbird/sb-dashlet/-/sb-dashlet-6.0.5.tgz#99ee397ac019edb5bdf51ed4f44111fafab66593"
-  integrity sha512-EfQHlx24zi8obUDdQxhxUl0bT3awMj/4+ezvuGMA7e5Lpqcq2X/wJOeHppgJ4+SvbsjtzA+MeiBdDiWgpJmBKg==
+"@project-sunbird/sb-dashlet@8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@project-sunbird/sb-dashlet/-/sb-dashlet-8.0.0.tgz#1cc6c3459491331b7a76becdece2a5a92c64b68b"
+  integrity sha512-5nrzoR/j3EHdHv5iBO7SnkDEFUscPhpgjb4I5hz8WXOFiv/YchvkariEOWCenZqK+3mJK8p2PhEZZgrgt0u4ww==
   dependencies:
     "@types/datatables.net" "1.10.19"
-    angular-datatables "14.0.2"
+    angular-datatables "15.0.1"
     chart.js "2.9.4"
     chartjs-plugin-annotation "^0.5.7"
     datatables.net "1.10.20"
     datatables.net-dt "1.10.20"
     joi "17.4.0"
-    jquery "3.4.1"
+    jquery "3.6.0"
     lodash-es "4.17.21"
-    ng-multiselect-dropdown "0.3.4"
+    ng-multiselect-dropdown "0.3.9"
     ng2-charts "2.4.2"
     ngx-daterangepicker-material "6.0.4"
     tslib "^2.0.0"
@@ -3319,6 +3319,11 @@ angular-datatables@14.0.2:
   version "14.0.2"
   resolved "https://registry.yarnpkg.com/angular-datatables/-/angular-datatables-14.0.2.tgz#17d8ccab636060137c45b0da9d3abfd2b5ae89d1"
   integrity sha512-uhiuiByiQxCr3MUw9Cjo0NYfbNUTGFez47BYpehGZAcaxAZkyMb0AJfKNly1jGhN9Cltn5LKGlX41+I4rENe3g==
+
+angular-datatables@15.0.1:
+  version "15.0.1"
+  resolved "https://registry.yarnpkg.com/angular-datatables/-/angular-datatables-15.0.1.tgz#8d85304987d7498709d6df62de1bf9fa39896056"
+  integrity sha512-dNck9aEDj9p7EzwtGfwOVS4s09f7gecgCfyPd/vwqoFVmPh5Lkb0gKofWZbaxSAx+TgU5VQhxOCdxOZh0kkIEw==
 
 angular2-uuid@1.1.1:
   version "1.1.1"
@@ -6397,7 +6402,7 @@ figures@^3.0.0:
   dependencies:
     escape-string-regexp "^1.0.5"
 
-"file-saver@github:eligrey/FileSaver.js#1.3.8":
+file-saver@eligrey/FileSaver.js#1.3.8:
   version "1.3.8"
   resolved "https://codeload.github.com/eligrey/FileSaver.js/tar.gz/e865e37af9f9947ddcced76b549e27dc45c1cb2e"
 
@@ -8446,15 +8451,15 @@ jquery.fancytree@2.35.0:
   resolved "https://registry.yarnpkg.com/jquery.fancytree/-/jquery.fancytree-2.35.0.tgz#5151279eb6817d470112bf7435e128d7569d2ae5"
   integrity sha512-eRNWU8z69UQWc3+M2IvMGPpqTZ5ZsWAR0/N/a0O7eRbjM8StC0RGUc+xg4BNL4W6hFlWeuVT7eP2T8rLW7l05A==
 
-jquery@3.4.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
-  integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
-
 jquery@3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.5.1.tgz#d7b4d08e1bfdb86ad2f1a3d039ea17304717abb5"
   integrity sha512-XwIBPqcMn57FxfT+Go5pzySnm4KWkT1Tv7gjrpT1srtf8Weynl6R273VJ5GjkRb51IzMp5nbaPjJXMWeju2MKg==
+
+jquery@3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.6.0.tgz#c72a09f15c1bdce142f49dbf1170bdf8adac2470"
+  integrity sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==
 
 jquery@>=1.7, jquery@~3:
   version "3.7.1"
@@ -9752,10 +9757,10 @@ next-tick@^1.1.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.1.0.tgz#1836ee30ad56d67ef281b22bd199f709449b35eb"
   integrity sha512-CXdUiJembsNjuToQvxayPZF9Vqht7hewsvy2sOWafLvi2awflj9mOC6bHIg50orX8IJvWKY9wYQ/zB2kogPslQ==
 
-ng-multiselect-dropdown@0.3.4:
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/ng-multiselect-dropdown/-/ng-multiselect-dropdown-0.3.4.tgz#134fa9c4deda7f7bc7774abe4bb1a3dbc4cdcd1c"
-  integrity sha512-ZUzA4apGY7Y0MW7scF35iPYy4/DpIRhZcQiTICDJFs66+JoJOE+YqA+Tx9C2Ylv0B8tADX7PAsTQL9Jys1vWiQ==
+ng-multiselect-dropdown@0.3.9:
+  version "0.3.9"
+  resolved "https://registry.yarnpkg.com/ng-multiselect-dropdown/-/ng-multiselect-dropdown-0.3.9.tgz#b7336ae67f41f3662087686273f41eefec72eade"
+  integrity sha512-y5fb8SVz8c59vEJGVe5XZ5ov6LZNoO8FqMxCBvpZKqw9tY1+f7UCDfILleOWPy8QMxO2Fpr8b+B+Az0zOS6b9g==
   dependencies:
     tslib "^1.9.0"
 
