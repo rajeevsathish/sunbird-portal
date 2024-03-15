@@ -7,8 +7,6 @@ import {
   ProfilePageComponent, ProfileBadgeComponent, UpdateContactDetailsComponent,
   AccountRecoveryInfoComponent, CreateUserComponent,DeleteUserComponent,DeleteAccountComponent, ChooseUserComponent, SubmitTeacherDetailsComponent
 } from './components';
-import { SuiSelectModule, SuiModalModule, SuiAccordionModule, SuiPopupModule, SuiDropdownModule,
-  SuiProgressModule, SuiRatingModule, SuiCollapseModule } from 'ng2-semantic-ui-v9';
 import { CoreModule } from '@sunbird/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { WebExtensionModule } from '@project-sunbird/web-extensions';
@@ -42,8 +40,6 @@ export const csCertificateServiceFactory = (csLibInitializerService: CsLibInitia
     CommonModule,
     ProfileRoutingModule,
     SharedModule,
-    SuiSelectModule, SuiModalModule, SuiAccordionModule, SuiPopupModule, SuiDropdownModule,
-    SuiProgressModule, SuiRatingModule, SuiCollapseModule,
     CoreModule,
     FormsModule,
     ReactiveFormsModule,
