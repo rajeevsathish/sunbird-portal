@@ -7,8 +7,6 @@ import { SharedModule } from '@sunbird/shared';
 import { CoreModule } from '@sunbird/core';
 import { TelemetryModule } from '@sunbird/telemetry';
 import { SharedFeatureModule } from '@sunbird/shared-feature';
-import { SuiSelectModule, SuiModalModule, SuiAccordionModule, SuiPopupModule, SuiDropdownModule,
-  SuiProgressModule, SuiRatingModule, SuiCollapseModule, SuiCheckboxModule } from 'ng2-semantic-ui-v9';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RecaptchaModule } from 'ng-recaptcha';
 
@@ -23,9 +21,8 @@ import { RecaptchaModule } from 'ng-recaptcha';
     RecaptchaModule,
     TelemetryModule,
     SharedFeatureModule,
-    SuiSelectModule, SuiModalModule, SuiAccordionModule, SuiPopupModule, SuiDropdownModule, SuiProgressModule,
-    SuiRatingModule, SuiCollapseModule, SuiCheckboxModule,
-    FormsModule, ReactiveFormsModule
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class RecoverAccountModule { }

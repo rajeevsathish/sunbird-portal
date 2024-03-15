@@ -4,7 +4,6 @@ import { SsoRoutingModule } from './sso-routing.module';
 import {SelectOrgComponent, UpdateContactComponent, AuthFailedComponent} from './components';
 import {TelemetryModule} from '@sunbird/telemetry';
 import { SharedFeatureModule } from '@sunbird/shared-feature';
-import { SuiModule } from 'ng2-semantic-ui-v9';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '@sunbird/shared';
 import { RecaptchaModule } from 'ng-recaptcha';
@@ -12,7 +11,6 @@ import { RecaptchaModule } from 'ng-recaptcha';
   imports: [
     CommonModule,
     SsoRoutingModule,
-    SuiModule,
     TelemetryModule,
     SharedFeatureModule,
     FormsModule,

@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CurriculumCoursesComponent } from './components';
 import { SharedModule } from '@sunbird/shared';
-import { SuiModule } from 'ng2-semantic-ui-v9';
 import { FormsModule } from '@angular/forms';
 import { CoreModule } from '@sunbird/core';
 import { TelemetryModule } from '@sunbird/telemetry';
@@ -15,7 +14,6 @@ import { ContentSearchModule } from '@sunbird/content-search';
     CommonModule,
     ResourceRoutingModule,
     SharedModule,
-    SuiModule,
     FormsModule,
     CoreModule,
     TelemetryModule,
