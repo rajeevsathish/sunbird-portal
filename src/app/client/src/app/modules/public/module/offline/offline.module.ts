@@ -1,4 +1,8 @@
 import { ContentManagerService } from './services';
+import {
+    SuiModalModule, SuiProgressModule, SuiAccordionModule,
+    SuiTabsModule, SuiSelectModule, SuiDimmerModule, SuiCollapseModule, SuiDropdownModule
+} from '@project-sunbird/ng2-semantic-ui';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CoreModule } from '@sunbird/core';
