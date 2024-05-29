@@ -5,7 +5,8 @@
  */
 const proxyUtils = require('../proxy/proxyUtils.js')
 const envHelper = require('../helpers/environmentVariablesHelper.js')
-const mlURL = envHelper.LEARNER_URL
+const utils = require('../helpers/utils.js');
+const mlURL  = utils?.defaultHost(utils?.envVariables?.LEARNER_URL);
 const telemetryHelper = require('../helpers/telemetryHelper.js')
 const proxy = require('express-http-proxy')
 const bodyParser = require('body-parser')
@@ -60,7 +61,8 @@ module.exports = function (app) {
         body: fileStream
       };
       request(options, function (error, response) {
-        if (response.statusCode === 201) {
+        const successStatusOptions = [200,201,202,'200','201','202'];
+        if (successStatusOptions.includes(response.statusCode)) {
           res.send({ responseCode: "OK", status: 200 })
         } else {
           res.send({ status: response.statusCode })
