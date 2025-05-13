@@ -39,7 +39,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular-devkit/build-angular": "14.2.10",
+    "@angular-devkit/build-angular": "17.3.13",
     "@angular/animations": "14.3.0",
     "@angular/cdk": "14.2.7",
     "@angular/cli": "14.2.10",
@@ -139,7 +139,7 @@
     "tslib": "2.0.0",
     "vc-js": "0.6.4",
     "video.js": "7.18.1",
-    "videojs-contrib-quality-levels": "2.1.0",
+    "videojs-contrib-quality-levels": "3.0.0",
     "videojs-http-source-selector": "1.1.6",
     "zone.js": "0.11.4"
   },
