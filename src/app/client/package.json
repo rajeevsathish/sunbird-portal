@@ -39,7 +39,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular-devkit/build-angular": "14.2.10",
+    "@angular-devkit/build-angular": "20.0.0",
     "@angular/animations": "14.3.0",
     "@angular/cdk": "14.2.7",
     "@angular/cli": "14.2.10",
@@ -100,7 +100,7 @@
     "fine-uploader": "5.16.2",
     "font-awesome": "4.7.0",
     "gulp": "4.0.2",
-    "gulp-brotli": "1.2.1",
+    "gulp-brotli": "2.0.0",
     "gulp-clean": "0.4.0",
     "gulp-decompress": "2.0.2",
     "gulp-download": "0.0.1",
